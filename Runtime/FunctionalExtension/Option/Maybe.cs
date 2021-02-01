@@ -23,6 +23,17 @@ namespace FunctionalExtension.Option
 
         public static Maybe<T> None => new Maybe<T>();
 
+
+        public static implicit operator Maybe<T>(T value)
+        {
+            if (value == null)
+            {
+                return new Maybe<T>();
+            }
+
+            return new Maybe<T>(value);
+        }
+
         internal Result<T> ToResult()
         {
             return HasValue
