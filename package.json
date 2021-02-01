@@ -1,5 +1,5 @@
 {
-  "name": "com.gametunes.utils",
+  "name": "com.edem.utils",
   "version": "1.0.0",
   "displayName": "Utils",
   "description": "This is an utillity package",
@@ -10,8 +10,7 @@
     "utility"
   ],
   "author": {
-    "name": "GameTunes",
-    "email": "info@gametunes.org",
-    "url": "https://www.gametunes.org"
+    "name": "Edem",
+    "email": "edem@mail.ru",
   }
 }
