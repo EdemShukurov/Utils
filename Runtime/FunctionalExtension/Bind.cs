@@ -1,4 +1,5 @@
 ﻿using FunctionalExtension.Common;
+using FunctionalExtension.Option;
 using System;
 
 namespace FunctionalExtension
@@ -17,6 +18,15 @@ namespace FunctionalExtension
             return input.IsSuccess 
                         ? nextFunction(input)
                         : Result<R>.Fail(input.Error);
+        }
+
+        public static Maybe<R> Bind<T, R>(this Maybe<T> input, Func<Maybe<T>, Maybe<R>> nextFunction)
+            where T : class
+            where R : class
+        {
+            return input.HasValue
+                        ? nextFunction(input)
+                        : Maybe<R>.None;
         }
 
         public static R? Bind<T, R>(this T? self, Func<T, R?> binder)
