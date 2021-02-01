@@ -7,6 +7,13 @@ namespace FunctionalExtension.Option
     {
         public T Value { get; private set; }
 
+        public bool HasValue => Value != null;
+
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="someValue">Value</param>
+        /// <exception cref="ValueIsNullException"></exception>
         public Maybe(T someValue)
         {
             if(someValue == null)
