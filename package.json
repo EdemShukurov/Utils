@@ -1,0 +1,17 @@
+{
+  "name": "com.gametunes.utils",
+  "version": "1.0.0",
+  "displayName": "Utils",
+  "description": "This is an utillity package",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "keywords": [
+    "library",
+    "utility"
+  ],
+  "author": {
+    "name": "GameTunes",
+    "email": "info@gametunes.org",
+    "url": "https://www.gametunes.org"
+  }
+}
