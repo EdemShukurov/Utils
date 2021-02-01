@@ -1,4 +1,4 @@
-﻿using System;
+﻿using FunctionalExtension.Common;
 
 namespace FunctionalExtension.Option
 {
@@ -16,16 +16,18 @@ namespace FunctionalExtension.Option
         /// <exception cref="ValueIsNullException"></exception>
         public Maybe(T someValue)
         {
-            if(someValue == null)
-            {
-                throw new ValueIsNullException(nameof(someValue));
-            }
-
             Value = someValue;
         }
 
         public Maybe() { }
 
         public static Maybe<T> None => new Maybe<T>();
+
+        internal Result<T> ToResult()
+        {
+            return HasValue
+                    ? new Result<T>(Value)
+                    : new Result<T>(new ValueIsNullException(nameof(Value)));
+        }
     }
 }

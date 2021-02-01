@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FunctionalExtension.Result
+namespace FunctionalExtension.Common
 {
     /// <summary>
     /// Result is null
